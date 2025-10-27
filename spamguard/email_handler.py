@@ -9,12 +9,12 @@ from gui import routed_mails, blocked_spams  # Import the lists from gui.py
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
-SOURCE_EMAIL = "cartnow.1@gmail.com"
+SOURCE_EMAIL = "sourcegmailid.1@gmail.com"
 
 DEPARTMENT_EMAILS = {
-    "support": "suprt.cartnow@gmail.com",
-    "sales": "sales.cartnow1@gmail.com",
-    "tech": "tech.cartnow1@gmail.com"
+    "support": "suprt@gmail.com",
+    "sales": "sales@gmail.com",
+    "tech": "tech@gmail.com"
 }
 
 # Authenticate with Gmail
@@ -176,3 +176,4 @@ def process_emails():
             id=msg['id'],
             body={'removeLabelIds': ['UNREAD']}
         ).execute()
+
